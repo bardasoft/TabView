@@ -237,7 +237,7 @@ public class TabView : ContentView
             SelectedTabIndex = newIndex;
         }
 
-        foreach (var item in e.OldItems)
+        foreach (var _ in e.OldItems)
         {
             Tabs.RemoveAt(e.OldStartingIndex);
         }
@@ -697,7 +697,7 @@ public class TabView : ContentView
     #region SelectedTabChangedCommandParameter
     public object SelectedTabChangedCommandParameter
     {
-        get { return (object)GetValue(SelectedTabChangedCommandParameterProperty); }
+        get { return GetValue(SelectedTabChangedCommandParameterProperty); }
         set { SetValue(SelectedTabChangedCommandParameterProperty, value); }
     }
 
